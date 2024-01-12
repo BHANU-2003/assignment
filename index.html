@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Editor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <button id="undo">Undo</button>
+        <button id="redo">Redo</button>
+    </div>
+
+    <div class="container">
+        <div class="text-input-container">
+            <label for="text-input">Enter text:</label>
+            <textarea id="text-input"></textarea>
+        </div>
+        <div class="options-container">
+            <p>Font</p>
+            <select id="font-style">
+                
+                <option value="Arial">Arial</option>
+                <option value="Roboto">Roboto</option>
+                <option value="sans-serif">San-serif</option>
+                <option value="serif">Serif</option>
+            </select> <br/>
+            <div>
+                <P>Font Size</P>
+                <button id="decremnt" onclick="decrement()">-</button>
+                <input class="quantity" id="quantity"  value="16" type="text">
+                <button id="increment" onclick="increment()">+</button>   
+                <p>Color</p>
+                <select id="font-color">
+                    <option value="black">Black</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="green">Green</option>
+                    <option value="orange">Orange</option>
+                </select>
+            
+            </div>
+            <label for="text-to-add">Enter text:</label>
+            <textarea id="text-to-add"></textarea>
+            <button id="add-text" onclick="add()">Add Text</button>
+            
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
