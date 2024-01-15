@@ -44,6 +44,7 @@ redoButton.addEventListener("click", () => {
 updateHistory(); // Add the initial text content to history
 
 
+
 const fontColorSelect = document.getElementById("font-color");
 
 fontColorSelect.addEventListener("change", (event) => {
@@ -75,19 +76,23 @@ function add() {
 const quantityInput = document.getElementById("quantity");
 
 
+let i=0;
+let myArray1=['20px','25px','30px','35px','40px','45px','50px'];
 
 function increment() {
-  const currentFontSize = parseFloat(quantityInput.style.fontSize) || 16;
-  const newFontSize = Math.min(40, currentFontSize + 2);
-  textInput.style.fontSize = newFontSize + "px";
+  
+  textInput.style.fontSize=myArray1[i++];
+  let fontSize=textInput.style.fontSize;
+  quantityInput.value=fontSize;
+  
 }
 
 function decrement() {
-  const currentFontSize = parseFloat(quantityInput.style.fontSize) || 16;
-  const newFontSize = Math.max(12, currentFontSize - 2);
-  textInput.style.fontSize = newFontSize + "px";
-}
-
+  textInput.style.fontSize=myArray1[i--];
+  let fontSize=textInput.style.fontSize;
+  quantityInput.value=fontSize;
+  
+} 
 
 
 
