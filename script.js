@@ -73,7 +73,7 @@ function add() {
 
 
 
-const quantityInput = document.getElementById("quantity");
+const fontSizeEl= document.getElementById("fontSize");
 
 
 let i=0;
@@ -83,14 +83,14 @@ function increment() {
   
   textInput.style.fontSize=myArray1[i++];
   let fontSize=textInput.style.fontSize;
-  quantityInput.value=fontSize;
+  fontSizeEl.value=fontSize;
   
 }
 
 function decrement() {
   textInput.style.fontSize=myArray1[i--];
   let fontSize=textInput.style.fontSize;
-  quantityInput.value=fontSize;
+  fontSizeEl.value=fontSize;
   
 } 
 
